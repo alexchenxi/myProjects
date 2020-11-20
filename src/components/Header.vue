@@ -1,13 +1,11 @@
 <template>
-	<div>
-		<div class="header"> <img src="@/assets/logo.svg" alt="" class="company-logo common-float-left" />
+		<div class="header"> <img src="../assets/logo.svg" alt="" class="company-logo common-float-left" />
 			<ul class="nav">
 				<li class="nav-item active">首页</li>
 				<li class="nav-item">首页</li>
 				<li class="nav-item">首页</li>
 				<li class="nav-item">首页</li>
 			</ul>
-		</div>
 		</div>
 
 </template>

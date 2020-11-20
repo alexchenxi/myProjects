@@ -1,19 +1,16 @@
 <template>
 	<div class="container">
-		<div class="header"> <img src="../assets/logo.svg" alt="" class="company-logo common-float-left" />
-			<ul class="nav">
-				<li class="nav-item active">首页</li>
-				<li class="nav-item">首页</li>
-				<li class="nav-item">首页</li>
-				<li class="nav-item">首页</li>
-			</ul>
-		</div>
+		<Header></Header>
 		<div class="main"> </div>
 	</div>
 </template>
 <script>
+	import Header from '@/components/common/Header'
 	export default {
 		name: 'Index',
+		components: {
+			Header
+		},
 		data() {
 			return {
 				msg: 'Welcome to Your Vue.js App',
