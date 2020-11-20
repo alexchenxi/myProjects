@@ -3,18 +3,13 @@
 		<div id="charts-demo" class="echart"></div>
 	</div>
 </template>
-
 <script>
 	export default {
 		name: 'Echarts',
 		data() {
-			return {
-
-			}
+			return {}
 		},
-		created() {
-
-		},
+		created() {},
 		mounted() {
 			this.drawLine()
 		},
@@ -25,10 +20,9 @@
 				myChart.showLoading();
 				$.get(ROOT_PATH + '/data/asset/data/les-miserables.gexf', function(xml) {
 					myChart.hideLoading();
-
 					var graph = echarts.dataTool.gexf.parse(xml);
 					var categories = [];
-					for(var i = 0; i < 9; i++) {
+					for (var i = 0; i < 9; i++) {
 						categories[i] = {
 							name: '类目' + i
 						};
@@ -88,14 +82,12 @@
 							}
 						}]
 					};
-
 					myChart.setOption(option);
 				}, 'xml');
 			},
 		}
 	}
 </script>
-
 <style>
 	.echart {
 		width: 100%;

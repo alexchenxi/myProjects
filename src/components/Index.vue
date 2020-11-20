@@ -1,6 +1,6 @@
 <template>
 	<div class="container">
-		<Header></Header>
+		<Header :activeIndex=0></Header>
 		<div class="main"> </div>
 	</div>
 </template>

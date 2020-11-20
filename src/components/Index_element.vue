@@ -1,7 +1,6 @@
 <template>
 	<div class="container">
-		<div class="header">
-			<img src="../assets/logo.svg" alt="" class="company_logo" />{{msg}}
+		<div class="header"> <img src="../assets/logo.svg" alt="" class="company_logo" />{{msg}}
 			<ul class="nav">
 				<li class="nav-item">首页</li>
 				<li class="nav-item">首页</li>
@@ -22,24 +21,17 @@
 			<el-badge :value="2" class="item" type="warning">
 				<el-button size="small">回复</el-button>
 			</el-badge>
-
-			<el-dropdown trigger="click">
-				<span class="el-dropdown-link">
+			<el-dropdown trigger="click"> <span class="el-dropdown-link">
 				    点我查看
 				    <i class="el-icon-caret-bottom el-icon--right"></i>
 				 </span>
 				<el-dropdown-menu slot="dropdown">
-					<el-dropdown-item class="clearfix">
-						评论
-						<el-badge class="mark" :value="12" />
-					</el-dropdown-item>
-					<el-dropdown-item class="clearfix">
-						回复
-						<el-badge class="mark" :value="3" />
-					</el-dropdown-item>
+					<el-dropdown-item class="clearfix"> 评论
+						<el-badge class="mark" :value="12" /> </el-dropdown-item>
+					<el-dropdown-item class="clearfix"> 回复
+						<el-badge class="mark" :value="3" /> </el-dropdown-item>
 				</el-dropdown-menu>
 			</el-dropdown>
-
 			<el-badge :value="200" :max="99" class="item">
 				<el-button size="small">评论</el-button>
 			</el-badge>
@@ -58,19 +50,14 @@
 			<el-badge :value="100" :max="10" class="item" type="warning">
 				<el-button size="small">warning</el-button>
 			</el-badge>
-
 			<div>
-				<el-alert title="不可关闭的 alert" type="success" :closable="false" show-icon center>
-				</el-alert>
-				<el-alert title="自定义 close-text" type="info" close-text="知道了">
-				</el-alert>
-				<el-alert title="设置了回调的 alert" type="warning" @close="hello">
-				</el-alert>
+				<el-alert title="不可关闭的 alert" type="success" :closable="false" show-icon center> </el-alert>
+				<el-alert title="自定义 close-text" type="info" close-text="知道了"> </el-alert>
+				<el-alert title="设置了回调的 alert" type="warning" @close="hello"> </el-alert>
 			</div>
 			<div>
 				<el-button :plain="true" @click="openVn">VNode</el-button>
 			</div>
-
 			<el-breadcrumb separator-class="el-icon-arrow-right">
 				<el-breadcrumb-item>首页</el-breadcrumb-item>
 				<el-breadcrumb-item><span @click="goLevel(2)" class="bread_item">张三</span></el-breadcrumb-item>
@@ -78,10 +65,8 @@
 				<el-breadcrumb-item>王五</el-breadcrumb-item>
 			</el-breadcrumb>
 		</div>
-
 	</div>
 </template>
-
 <script>
 	export default {
 		name: 'Index',
@@ -128,7 +113,6 @@
 		}
 	}
 </script>
-
 <style>
 	.company_logo {
 		float: left;
@@ -139,7 +123,7 @@
 		margin-right: 40px;
 	}
 	
-	.bread_item{
+	.bread_item {
 		cursor: pointer;
 	}
 </style>
