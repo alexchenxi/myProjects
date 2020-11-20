@@ -1,9 +1,11 @@
 <template>
 	<div>
 		<div class="header"> <img src="@/assets/logo.svg" alt="" class="company-logo common-float-left" />
-			<ul class="nav">
-				<li :class="activeIndex==index?'nav-item active':'nav-item'" v-for="(item,index) in indexList" :key="item.tagIndex">{{item.name}}</li>
-			</ul>
+			<ul
+			 class="nav">
+				<li @click="navTo(index)" :class="activeIndex==index?'nav-item active':'nav-item'"
+				 v-for="(item,index) in indexList" :key="item.tagIndex">{{item.name}}</li>
+				</ul>
 		</div>
 	</div>
 </template>
@@ -13,16 +15,20 @@
 			return {
 				indexList: [{
 					'name': '首页',
-					'tagIndex': 0
+					'tagIndex': 0,
+					'routerPath': '/'
 				}, {
-					'name': '首页2',
-					'tagIndex': 1
+					'name': '产品展示',
+					'tagIndex': 1,
+					'routerPath': '/element'
 				}, {
-					'name': '首页3',
-					'tagIndex': 2
+					'name': '推广',
+					'tagIndex': 2,
+					'routerPath': '/element'
 				}, {
-					'name': '首页4',
-					'tagIndex': 3
+					'name': '联系我们',
+					'tagIndex': 3,
+					'routerPath': '/element'
 				}]
 			}
 		},
@@ -31,7 +37,13 @@
 			activeIndex: [Number]
 		},
 		components: {},
-		methods: {}
+		methods: {
+			navTo(tabIndex) {
+				if(tabIndex === this.activeIndex) return
+				this.$message('即将进入页面' + tabIndex);
+				this.$router.push(this.indexList[tabIndex].routerPath);
+			}
+		}
 	}
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

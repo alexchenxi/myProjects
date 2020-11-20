@@ -1,13 +1,6 @@
 <template>
 	<div class="container">
-		<div class="header"> <img src="../assets/logo.svg" alt="" class="company_logo" />{{msg}}
-			<ul class="nav">
-				<li class="nav-item">首页</li>
-				<li class="nav-item">首页</li>
-				<li class="nav-item">首页</li>
-				<li class="nav-item">首页</li>
-			</ul>
-		</div>
+		<Header :activeIndex=1></Header>
 		<div class="main">
 			<el-badge :value="12" class="item">
 				<el-button size="small">评论</el-button>
@@ -51,7 +44,8 @@
 				<el-button size="small">warning</el-button>
 			</el-badge>
 			<div>
-				<el-alert title="不可关闭的 alert" type="success" :closable="false" show-icon center> </el-alert>
+				<el-alert title="不可关闭的 alert" type="success" :closable="false" show-icon center>
+				</el-alert>
 				<el-alert title="自定义 close-text" type="info" close-text="知道了"> </el-alert>
 				<el-alert title="设置了回调的 alert" type="warning" @close="hello"> </el-alert>
 			</div>
@@ -65,15 +59,22 @@
 				<el-breadcrumb-item>王五</el-breadcrumb-item>
 			</el-breadcrumb>
 		</div>
+		<Footer></Footer>
 	</div>
 </template>
 <script>
+	import Header from '@/components/common/Header'
+	import Footer from '@/components/common/Footer'
 	export default {
 		name: 'Index',
+		components: {
+			Header,
+			Footer
+		},
 		data() {
 			return {
 				msg: 'welcome to the league of Element-UI',
-				activeIndex: '1'
+				activeIndex: '2'
 			}
 		},
 		created() {
